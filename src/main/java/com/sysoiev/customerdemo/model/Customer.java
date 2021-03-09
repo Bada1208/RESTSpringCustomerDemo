@@ -1,8 +1,6 @@
 package com.sysoiev.customerdemo.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,10 +8,8 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
+@Data
 @Table(name = "customers")
-@Getter
-@Setter
-@ToString
 public class Customer extends BaseEntity {
     @Column(name = "first_name")
     private String firstName;
